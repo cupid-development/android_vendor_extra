@@ -5,4 +5,8 @@
 #
 
 # OTA
-PRODUCT_PACKAGES += UpdaterOverlay
+ifeq ($(LINEAGE_BUILD),)
+PRODUCT_PACKAGES += CalyxUpdaterOverlay
+else
+PRODUCT_PACKAGES += LineageUpdaterOverlay
+endif
